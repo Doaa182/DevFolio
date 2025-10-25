@@ -152,6 +152,11 @@ nav {
   color: var(--pure-pink);
 }
 
+.modal-header .btn-close:focus {
+  box-shadow: 0 0 0 4px var(--light-grayish-pink);
+  
+}
+
 section {
   scroll-margin-top: 80px;
 }
