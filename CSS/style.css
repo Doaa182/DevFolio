@@ -1,3 +1,8 @@
+*::selection {
+  color: var(--pure-pink);
+  background-color: var(--light-grayish-pink);
+}
+
 nav {
   z-index: 999;
 }
@@ -52,7 +57,7 @@ nav {
 }
 
 .dropdown .bi-chevron-down {
-  font-size: 12px;
+  font-size: var(--font-size-1);
 }
 
 .dropdown-toggle::after {
@@ -61,7 +66,7 @@ nav {
 
 .dropdown-menu a {
   padding: 8px 20px;
-  font-size: 14px;
+  font-size: var(--font-size-2);
   color: var(--very-dark-gray);
   display: block;
   transition: color 0.2s ease-out;
@@ -73,7 +78,7 @@ nav {
 
 .toggle-anchor {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: var(--font-size-3);
   color: var(--very-dark-gray);
   transition: color 0.2s ease-out;
   -webkit-transition: color 0.2s ease-out;
@@ -88,7 +93,7 @@ nav {
 }
 
 .dropdown-menu .bi-chevron-right {
-  font-size: 12px;
+  font-size: var(--font-size-1);
 }
 
 .deep-list {
@@ -124,7 +129,7 @@ nav {
 .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
   padding: 10px 20px;
   height: 38px;
-  font-size: 16px;
+  font-size: var(--font-size-3);
   color: var(--very-dark-gray);
   transition: color 0.2s ease-out;
   -webkit-transition: color 0.2s ease-out;
@@ -146,6 +151,10 @@ nav {
 .accordion-body a {
   color: var(--very-dark-gray);
   transition: color 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
 }
 
 .accordion-body a:hover {
@@ -154,7 +163,6 @@ nav {
 
 .modal-header .btn-close:focus {
   box-shadow: 0 0 0 4px var(--light-grayish-pink);
-  
 }
 
 section {
@@ -321,6 +329,10 @@ header h1 {
 
 .portfolio-card img {
   transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
 }
 
 .portfolio-card:hover img {
@@ -354,6 +366,10 @@ header h1 {
   color: var(--pure-pink);
   transition: all 0.35s ease-in-out;
   font-size: 40px;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
 }
 
 #portfolio-sec i:hover {
@@ -392,6 +408,10 @@ header h1 {
   border: 1px rgba(var(--black), 0.175) solid;
   transition: all 0.35s ease-in-out;
   position: relative;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
 }
 
 #blog-sec .blog-card:hover {
@@ -410,6 +430,10 @@ header h1 {
   color: var(--mostly-black);
   transition: all 0.5s ease-in-out;
   font-size: 20.8px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 #blog-sec .content-wrap a:hover,
@@ -425,6 +449,10 @@ a span {
   padding-left: 8px;
   color: var(--mostly-black);
   transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .span-wrapper {
@@ -436,15 +464,17 @@ a span {
   background-color: #f8f8f8;
   border-radius: 0px 0px 6px 6px;
   border-top: 1px rgba(var(--black), 0.175) solid;
+  -webkit-border-radius: 0px 0px 6px 6px;
+  -moz-border-radius: 0px 0px 6px 6px;
+  -ms-border-radius: 0px 0px 6px 6px;
+  -o-border-radius: 0px 0px 6px 6px;
 }
 
 #blog-sec .card-footer img {
   width: 32px;
 }
 
-.content-wrap span:first-child,
-#blog-sec .col-sm-12:last-child .content-wrap span:first-child,
-#blog-sec .col-sm-12:nth-child(2) .content-wrap span:first-child {
+#blog-sec .img-wrap span {
   position: absolute;
   color: var(--white);
   padding: 6px 15px;
@@ -453,8 +483,17 @@ a span {
   text-transform: uppercase;
   font-size: 11.2px;
   font-weight: 500;
-  right: 50%;
-  bottom: 50%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 #contact-sec {
@@ -472,11 +511,16 @@ a span {
   content: "";
   position: absolute;
   top: 100%;
-  right: 81.5%;
+  right: 100%;
+  transform: translateX(100%);
   background-color: var(--pure-pink);
   height: 3px;
   width: 100px;
   margin-top: 8px;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
 }
 
 #contact-sec button {
@@ -524,7 +568,7 @@ a span {
 
 #contact-sec input,
 #contact-sec textarea {
-  font-size: 14px;
+  font-size: var(--font-size-2);
 }
 
 #contact-sec .contact-right-content ul:last-child {
@@ -538,7 +582,9 @@ a span {
 
 footer {
   /* background-color: #0062d3; */
-  background-color: #ce1b7b;
+  /* background-color: #ce1b7b; */
+  /* background-color: #b31a6e; */
+  background-image: linear-gradient(to bottom, #ce1b7b 0%, #a11564 100%);
   box-shadow: 0 -13px 8px -11px rgba(var(--black), 0.2);
 }
 
@@ -548,6 +594,10 @@ footer {
   bottom: 15px;
   padding: 5px;
   transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
 }
 
 #arrow-up i:hover {
@@ -757,8 +807,10 @@ footer {
 
 :root {
   --white: #ffffff;
-  /* --pure-blue: #0078ff;
-  --dark-pure-blue: rgba(0, 120, 255, 0.702); */
+  /* 
+  --pure-blue: #0078ff;
+  --dark-pure-blue: rgba(0, 120, 255, 0.702); 
+  */
   --pure-pink: #ff0078;
   --dark-pure-pink: rgba(255, 0, 120, 0.702);
   /* --light-grayish-blue: #cde1f8; */
@@ -767,4 +819,7 @@ footer {
   --very-light-gray: #f5f5f5;
   --mostly-black: #1e1e1e;
   --black: 0, 0, 0;
+  --font-size-1: 12px;
+  --font-size-2: 14px;
+  --font-size-3: 16px;
 }
