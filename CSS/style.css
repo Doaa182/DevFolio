@@ -287,6 +287,12 @@ header h1 {
   border: var(--light-grayish-pink) 10px solid;
 }
 
+#services-sec .services-card p:nth-child(2) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #about-sec h3,
 #services-sec .col div :nth-child(2),
 #contact-sec h3 {
